@@ -1,24 +1,45 @@
 
 function onSdCreate() {
-    $.get("sandbox/create", function (data, status) {
+
+    var reqStr = "sandbox/create"
+    + "?appType=0"
+    + "&appConfig="
+    + "&os=0"
+    + "&ip="
+    + "&port="
+    + "&memory=1g"
+    + "&cpu=1024";
+
+    $.get(reqStr, function (data, status) {
         $("#sd_testLabel").text(data);
     }.bind(this));
 }
 
 function onSdRemove() {
-    $.get("sandbox/remove", function (data, status) {
+
+    var reqStr = "sandbox/remove"
+        + "?id=123";
+
+    $.get(reqStr, function (data, status) {
         $("#sd_testLabel").text(data);
     }.bind(this));
 }
 
 function onSdSelect() {
-    $.get("sandbox/selectSingle", function (data, status) {
+
+    var reqStr = "sandbox/selectSingle"
+        + "?id=123";
+
+    $.get(reqStr, function (data, status) {
         $("#sd_testLabel").text(data);
     }.bind(this));
 }
 
 function onSdSelectAll() {
-    $.get("sandbox/selectAll", function (data, status) {
+
+    var reqStr = "sandbox/selectAll";
+
+    $.get(reqStr, function (data, status) {
         $("#sd_testLabel").text(data);
     }.bind(this));
 }
