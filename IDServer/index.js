@@ -14,11 +14,11 @@ app.get("/serverInfo", function (req, res) {
     var port = server.address().port;
 
     res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
-    res.write("服务地址: http:" + host + ":" + port);
+    res.write("第一个测试服务地址: http:" + host + ":" + port);
     res.end();
 });
 
-var server = app.listen(0, function () {
+var server = app.listen(9999, function () {
 
     var host = server.address().host;
     var port = server.address().port;

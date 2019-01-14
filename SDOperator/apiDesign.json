@@ -65,7 +65,8 @@
     "memory": "1g",
     "cpu": "1024"
   },
-  //1.3 查找所有沙盒
+
+  //1.4 查找所有沙盒
   //Route : sandbox/selectAll
   //Parameter:
   {},
@@ -97,5 +98,65 @@
     "port": "7777",
     "memory": "1g",
     "cpu": "1024"
+  }],
+
+  //Docker 文件操作
+
+  //1.5 上传文件到指定目录
+  //Route : sandbox/fileuUpload
+  //Parameter:
+  {
+    "fileInfo": "[必选] 文件体",
+    "tarFileName": "[可选] 目标文件名",
+    "tarSDFilePath": "[可选] 目标文件沙盒存储位置"
+  },
+  //ResponseData:
+  {
+    "success": true;
+  },
+
+  //1.6 从指定目录下载文件
+  //Route : sandbox/fileDownload
+  //Parameter:
+  {
+    "tarFileName": "[必选] 目标文件名",
+    "tarSDFilePath": "[必选] 目标文件沙盒存储位置"
+  },
+  //ResponseData:
+  {
+    "文件下载": ""
+  },
+
+  //1.7 从指定目录查看文件
+  //Route : sandbox/fileList
+  //Parameter:
+  {
+    "tarSDFilePath": "[必选] 目标文件沙盒存储位置"
+  },
+  //ResponseData:
+  [{
+    "fileName": "Dockerfile",
+    "fileAttr": "-rw-r--r--",
+    "createTime": "Jan 14 02:55",
+    "fileSize": "296 B",
+    "userName": "root",
+    "groupName": "root",
+    "linkOrSubfileNum": "1"
+  },{
+    "fileName": "node_modules",
+    "fileAttr": "drwxr-xr-x",
+    "createTime": "Jan 11 08:58",
+    "fileSize": "4096 B",
+    "userName": "root",
+    "groupName": "root",
+    "linkOrSubfileNum": "74"
+  },{
+    "fileName": "htmls",
+    "fileAttr": "drwxr-xr-x",
+    "createTime": "Jan 11 09:19",
+    "fileSize": "4096 B",
+    "userName": "root",
+    "groupName": "root",
+    "linkOrSubfileNum": "3"
   }]
 ]
