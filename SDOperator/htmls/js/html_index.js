@@ -35,6 +35,16 @@ function onSdSelect() {
     }.bind(this));
 }
 
+function onSdRemove() {
+
+    var reqStr = "sandbox/removeAll";
+
+    $.get(reqStr, function (data, status) {
+        $("#sd_testLabel").text(data);
+    }.bind(this));
+}
+
+
 function onSdSelectAll() {
 
     var reqStr = "sandbox/selectAll";

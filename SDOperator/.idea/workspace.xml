@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc7ff6b-d313-4089-9487-0412e8d15097" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/test_cydocker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmls/js/html_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/js/html_index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toolkit/cy_docker.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolkit/cy_docker.js" afterDir="false" />
     </list>
@@ -40,8 +44,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-363">
-              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+            <state relative-caret-position="458">
+              <caret line="144" column="27" lean-forward="true" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+              <folding>
+                <element signature="e#201#1189#0" />
+                <element signature="e#1836#2511#0" />
+                <element signature="e#2572#3246#0" />
+                <element signature="e#3304#4078#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,11 +59,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toolkit/cy_docker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="165">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#container_create#0" />
+                <element signature="n#!!block;n#container_remove#0" />
+                <element signature="n#!!block;n#container_select#0" />
+                <element signature="n#!!block;n#container_removeAll#0" />
+                <element signature="n#!!block;n#container_selectAll#0" />
+                <element signature="n#!!block;n#container_parserItem#0" />
+                <element signature="n#!!block;n#shortStr#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_cydocker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -70,8 +96,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmls/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="225">
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -91,6 +126,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>cydocker</find>
+      <find>substr</find>
+      <find>cmdStr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,14 +138,15 @@
       <list>
         <option value="$PROJECT_DIR$/htmls/js/index.js" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/htmls/index.html" />
-        <option value="$PROJECT_DIR$/htmls/js/html_index.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/apiDesign.json" />
         <option value="$PROJECT_DIR$/toolkit/sd_toolkit.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/routers/index.js" />
         <option value="$PROJECT_DIR$/toolkit/cy_docker.js" />
+        <option value="$PROJECT_DIR$/test/test_cydocker.js" />
+        <option value="$PROJECT_DIR$/routers/index.js" />
+        <option value="$PROJECT_DIR$/htmls/index.html" />
+        <option value="$PROJECT_DIR$/htmls/js/html_index.js" />
       </list>
     </option>
   </component>
@@ -116,9 +154,10 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="124" />
+    <option name="x" value="523" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="614" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -140,6 +179,12 @@
               <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
               <item name="htmls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
@@ -177,13 +222,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test_cydocker.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/test_cydocker.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.test_cydocker.js" />
       </list>
     </recent_temporary>
   </component>
@@ -202,12 +251,12 @@
       <workItem from="1547449687823" duration="2886000" />
       <workItem from="1547514904647" duration="544000" />
       <workItem from="1547541922601" duration="1708000" />
-      <workItem from="1547686134218" duration="7134000" />
+      <workItem from="1547686134218" duration="15796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26783000" />
+    <option name="totallyTimeSpent" value="35445000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,7 +272,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14138205" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14138205" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.26346433" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -231,8 +280,8 @@
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.24454148" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.15866084" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.24454148" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3959243" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32896653" />
@@ -249,9 +298,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routers/index.js</url>
-          <line>97</line>
+          <line>85</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routers/index.js</url>
+          <line>76</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -280,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="4" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apiDesign.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
@@ -311,13 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -327,18 +368,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/toolkit/cy_docker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="165">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#container_create#0" />
+            <element signature="n#!!block;n#container_remove#0" />
+            <element signature="n#!!block;n#container_select#0" />
+            <element signature="n#!!block;n#container_removeAll#0" />
+            <element signature="n#!!block;n#container_selectAll#0" />
+            <element signature="n#!!block;n#container_parserItem#0" />
+            <element signature="n#!!block;n#shortStr#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_cydocker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        <state relative-caret-position="458">
+          <caret line="144" column="27" lean-forward="true" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
+          <folding>
+            <element signature="e#201#1189#0" />
+            <element signature="e#1836#2511#0" />
+            <element signature="e#2572#3246#0" />
+            <element signature="e#3304#4078#0" />
+          </folding>
         </state>
       </provider>
     </entry>
