@@ -45,17 +45,18 @@ function sd_router(app) {
         /* 参数检查(可能返回错误) */
 
         /* 功能处理 */
+        var rst = cydocker.container_removeAll();
 
         /* 测试模拟 */
         var testRes = JSON.parse("{}");
-        testRes.id = sdId;
-        testRes.appType = "0";
-        testRes.appConfig = "";
-        testRes.os = "0";
-        testRes.ip = "192.168.4.234";
-        testRes.port = "9839";
-        testRes.memory = "1g";
-        testRes.cpu = "1024";
+        // testRes.id = sdId;
+        // testRes.appType = "0";
+        // testRes.appConfig = "";
+        // testRes.os = "0";
+        // testRes.ip = "192.168.4.234";
+        // testRes.port = "9839";
+        // testRes.memory = "1g";
+        // testRes.cpu = "1024";
         var resInfo = toolkit.sd_res_success(testRes);
 
         /* 成功消息 */
@@ -99,21 +100,22 @@ function sd_router(app) {
         /* 参数检查 无参数 */
 
         /* 功能处理 */
+        var rst = cydocker.container_infoAll();
 
         /* 测试模拟 */
-        var singleRes = JSON.parse("{}");
-        var testRes = JSON.parse("[]");
-        singleRes.appType = "0";
-        singleRes.appConfig = "";
-        singleRes.os = "0";
-        singleRes.ip = "192.168.4.234";
-        singleRes.port = "9839";
-        singleRes.memory = "1g";
-        singleRes.cpu = "1024";
-        testRes.push(singleRes);
-        testRes.push(singleRes);
-        testRes.push(singleRes);
-        var resInfo = toolkit.sd_res_success(testRes);
+        // var singleRes = JSON.parse("{}");
+        // var testRes = JSON.parse("[]");
+        // singleRes.appType = "0";
+        // singleRes.appConfig = "";
+        // singleRes.os = "0";
+        // singleRes.ip = "192.168.4.234";
+        // singleRes.port = "9839";
+        // singleRes.memory = "1g";
+        // singleRes.cpu = "1024";
+        // testRes.push(singleRes);
+        // testRes.push(singleRes);
+        // testRes.push(singleRes);
+        var resInfo = toolkit.sd_res_success(rst);
 
         /* 成功消息 */
         res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});

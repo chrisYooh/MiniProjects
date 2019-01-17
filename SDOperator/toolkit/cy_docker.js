@@ -45,16 +45,58 @@ function container_create(appType, appConfig, os, ip, port) {
     return tmpStr;
 }
 
-function container_infoAll() {
-    
+function container_parserItem(itemStr) {
+
+    var tmpArray = itemStr.split(/[ ]+/);
+
+    var tmpItem = JSON.parse("{}");
+    if (tmpArray.length >= 7) {
+        tmpItem.containerId = tmpArray[0];
+        tmpItem.imageName = tmpArray[1];
+        tmpItem.command = tmpArray[2];
+        tmpItem.createInfo = tmpArray[3];
+        tmpItem.status = tmpArray[4];
+        tmpItem.ports = tmpArray[5];
+        tmpItem.constainerName = tmpArray[6];
+    }
+
+    return tmpItem;
 }
 
-function container_remove(runStr) {
+function container_infoAll() {
 
+    var cmdStr = "docker ps";
+    var tmpBuf = execSync(cmdStr);
+    var rstStr = tmpBuf.toString();
+    var lineArray = rstStr.split("\n");
+
+    var itemArray = JSON.parse("[]");
+    for (i = 1; i < lineArray.length; i++) {
+        if (lineArray[i].length <= 0 ) {
+            continue;
+        }
+
+        var tmpItem = container_parserItem(lineArray[i]);
+        itemArray.push(tmpItem);
+    }
+
+    return itemArray;
+}
+
+function container_remove(conId) {
+
+    var cmdStr = "docker stop " + conId;
+    var tmpBuf = execSync(cmdStr);
+
+    var cmdStr = "docker rm " + conId;
+    var tmpBuf = execSync(cmdStr);
 }
 
 function container_removeAll() {
-
+    var itemArray = container_infoAll();
+    for (i = 0; i < itemArray.length; i++) {
+        container_remove(itemArray[i].containerId);
+    }
 }
 
 module.exports.container_create = container_create;
