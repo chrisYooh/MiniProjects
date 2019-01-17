@@ -172,7 +172,7 @@ function container_selectAll() {
 /* 支持：解析单行容器信息-->容器数据结构 */
 function container_parserItem(itemStr) {
 
-    var tmpArray = itemStr.split(/[ ]+/);
+    var tmpArray = itemStr.split(/ [ ]+/);
 
     var tmpItem = JSON.parse("{}");
     if (tmpArray.length >= 7) {

@@ -44,7 +44,6 @@ function onSdRemove() {
     }.bind(this));
 }
 
-
 function onSdSelectAll() {
 
     var reqStr = "sandbox/selectAll";
