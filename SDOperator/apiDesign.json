@@ -137,7 +137,7 @@
   [{
     "fileName": "Dockerfile",
     "fileAttr": "-rw-r--r--",
-    "createTime": "Jan 14 02:55",
+    "lastModifyTime": "Jan 14 02:55",
     "fileSize": "296 B",
     "userName": "root",
     "groupName": "root",
@@ -145,7 +145,7 @@
   },{
     "fileName": "node_modules",
     "fileAttr": "drwxr-xr-x",
-    "createTime": "Jan 11 08:58",
+    "lastModifyTime": "Jan 11 08:58",
     "fileSize": "4096 B",
     "userName": "root",
     "groupName": "root",
@@ -153,7 +153,7 @@
   },{
     "fileName": "htmls",
     "fileAttr": "drwxr-xr-x",
-    "createTime": "Jan 11 09:19",
+    "lastModifyTime": "Jan 11 09:19",
     "fileSize": "4096 B",
     "userName": "root",
     "groupName": "root",

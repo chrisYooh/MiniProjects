@@ -1,0 +1,9 @@
+docker image rm inner_server_1
+docker image rm inner_server_2
+docker image rm inner_server_3
+
+docker build -t inner_server_1 ./IDServer
+docker build -t inner_server_2 ./IDServer2
+docker build -t inner_server_3 ./IDServer3
+
+docker images
