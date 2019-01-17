@@ -1,18 +1,10 @@
 var url = require('url');
 var toolkit = require("../toolkit/sd_toolkit");
-var cydocker = require('../toolkit/cy_docker')
+var cydocker = require('../toolkit/cy_docker');
 
 function sd_router(app) {
 
     app.get("/sandbox/create", function (req, res) {
-
-        /* 待配置参数 */
-        var serverPortStr = "9999";
-        var app0 = "inner_server_1"
-        var app1 = "inner_server_1"
-        var app2 = "inner_server_2"
-        var app3 = "inner_server_3"
-
 
         /* 参数获取 */
         var paras = url.parse(req.url, true).query;
@@ -24,25 +16,8 @@ function sd_router(app) {
         var ip = paras.ip;                  /* 暂不参考 */
         var port = paras.port;
 
-        /* 功能处理 */
-        var cmdStr = "docker run -d ";
-        if (port.length > 0) {
-            cmdStr = cmdStr + "-p " + port + ":" + serverPortStr;
-        } else {
-            cmdStr += "-P ";
-        }
-
-        if (1 == appType) {
-            cmdStr += app1;
-        } else if (2 == appType) {
-            cmdStr += app2;
-        } else if (3 == appType) {
-            cmdStr += app3;
-        } else {
-            cmdStr += app1;
-        }
-
-        var rst = cydocker.container_run(cmdStr);
+        /* 执行命令 */
+        var rst = cydocker.container_create(appType, appConfig, os, ip, port);
         if ("error" === rst) {
             /* 失败 */
             resInfo = toolkit.sd_res_failed(JSON.parse("{}"), -1, "run命令执行失败");
@@ -57,7 +32,7 @@ function sd_router(app) {
 
         /* 成功消息 */
         res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
-        res.write(cmdStr + "\n" + JSON.stringify(resInfo));
+        res.write(JSON.stringify(resInfo));
         res.end();
     });
 
