@@ -1,3 +1,31 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="UTF-8" />-->
+<!--<title>菜鸟教程 React 实例</title>-->
+<!--<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>-->
+<!--<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>-->
+<!--<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div id="example"></div>-->
+<!--<script type="text/babel">-->
+<!--function HelloMessage(props) {-->
+<!--return <h1>Hello World!</h1>;-->
+<!--}-->
+
+<!--const element = <HelloMessage />;-->
+
+<!--ReactDOM.render(-->
+<!--element,-->
+<!--document.getElementById('example')-->
+<!--);-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -5,20 +33,43 @@
     <meta charset="UTF-8">
     <title>沙盒操作</title>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/chris-base.css">
+    <link rel="stylesheet" href="./css/chris_flex.css">
+
+    <!-- REACT -->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <!-- JQUERY -->
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- MY -->
     <script type="text/javascript" src="./js/html_index.js"></script>
+
+    <!-- REACT -->
+    <script type="text/babel" src="./react/react_sd_info.js"></script>
+    <script type="text/babel" src="./react/react_sd_op.js"></script>
+    <script type="text/babel" src="./react/testreact.js"></script>
+
 </head>
+
 <body>
 
-<button id="sd_create" onclick="onSdCreate()">添加沙盒</button>
-<button id="sd_remove" onclick="onSdRemove()">删除沙盒</button>
-<button id="sd_select" onclick="onSdSelect()">查找一个沙盒</button>
-<button id="sd_remove_all" onclick="onSdRemoveAll()">删除所有沙盒</button>
-<button id="sd_select_all" onclick="onSdSelectAll()">查找所有沙盒</button>
-<br/>
-<label id="sd_testLabel">
-暂无数据
-</label>
+<div class="mainpage_baseboard flex-col">
+
+    <!-- 标题 -->
+    <div class="mainpage_titleLabel chris_rowflex">
+        沙盒构建演示Demo - 主页
+    </div>
+
+    <div id="mainpage_sd_board" class="mainpage_sd_board chris_rowflex">
+        <div id="mainpage_sd_info" class="mainpage_sd_info"></div>
+        <div id="mainpage_sd_op" class="mainpage_sd_op"></div>
+    </div>
+</div>
 
 </body>
 </html>

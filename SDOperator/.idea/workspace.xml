@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc7ff6b-d313-4089-9487-0412e8d15097" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/htmls/js/html_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/js/html_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolkit/cy_docker.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolkit/cy_docker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolkit/sd_toolkit.js" beforeDir="false" afterPath="$PROJECT_DIR$/toolkit/sd_toolkit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmls/react/react_sd_info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmls/react/react_sd_op.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htmls/react/testreact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,26 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/toolkit/sd_toolkit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#!!block;n#sd_http_set_success#0" />
-                <element signature="n#!!block;n#sd_http_set_failed#0" />
-                <element signature="n#!!block;n#sd_res_success#0" />
-                <element signature="n#!!block;n#sd_res_failed#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toolkit/cy_docker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2440">
+            <state relative-caret-position="2610">
               <caret line="174" column="35" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -49,33 +35,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-              <folding>
-                <element signature="e#201#1187#0" />
-                <element signature="e#1242#2017#0" />
-                <element signature="e#2078#2822#0" />
-                <element signature="e#2880#3540#0" />
-                <element signature="e#3598#4258#0" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htmls/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="63" column="51" lean-forward="true" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htmls/index.html">
+        <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            <state>
+              <caret selection-end-line="5" selection-end-column="2" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_op.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/css/chris-base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/react/testreact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/css/chris_flex.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-168">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmls/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="n#!!block;n#onSdCreate#0" />
                 <element signature="n#!!block;n#onSdRemove#0" />
@@ -105,6 +134,8 @@
       <find>substr</find>
       <find>cmdStr</find>
       <find>toolkit</find>
+      <find>horizontal</find>
+      <find>mainpage_sd_board</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,22 +150,26 @@
         <option value="$PROJECT_DIR$/apiDesign.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/test_cydocker.js" />
-        <option value="$PROJECT_DIR$/htmls/index.html" />
         <option value="$PROJECT_DIR$/routers/index.js" />
         <option value="$PROJECT_DIR$/toolkit/cy_docker.js" />
         <option value="$PROJECT_DIR$/htmls/js/html_index.js" />
         <option value="$PROJECT_DIR$/toolkit/sd_toolkit.js" />
+        <option value="$PROJECT_DIR$/htmls/react/testreact.js" />
+        <option value="$PROJECT_DIR$/htmls/css/chris-base.css" />
+        <option value="$PROJECT_DIR$/htmls/react/react_sd_info.js" />
+        <option value="$PROJECT_DIR$/htmls/index.html" />
+        <option value="$PROJECT_DIR$/htmls/react/react_sd_op.js" />
       </list>
     </option>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="523" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="295" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="713" />
+    <option name="width" value="985" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -144,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,22 +195,19 @@
               <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
               <item name="htmls" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
-              <item name="toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,12 +259,14 @@
       <workItem from="1547449687823" duration="2886000" />
       <workItem from="1547514904647" duration="544000" />
       <workItem from="1547541922601" duration="1708000" />
-      <workItem from="1547686134218" duration="18963000" />
+      <workItem from="1547686134218" duration="19072000" />
+      <workItem from="1548031484588" duration="311000" />
+      <workItem from="1548062587688" duration="6266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38612000" />
+    <option name="totallyTimeSpent" value="45298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -245,11 +278,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20015885" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19936457" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.26346433" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -257,7 +290,7 @@
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.20960699" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.20826162" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3959243" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -276,7 +309,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routers/index.js</url>
           <line>55</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
@@ -334,9 +366,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/toolkit/sd_toolkit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#sd_http_set_success#0" />
+            <element signature="n#!!block;n#sd_http_set_failed#0" />
+            <element signature="n#!!block;n#sd_res_success#0" />
+            <element signature="n#!!block;n#sd_res_failed#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/toolkit/cy_docker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2440">
+        <state relative-caret-position="2610">
           <caret line="174" column="35" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -344,31 +390,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="e#201#1187#0" />
-            <element signature="e#1242#2017#0" />
-            <element signature="e#2078#2822#0" />
-            <element signature="e#2880#3540#0" />
-            <element signature="e#3598#4258#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="n#!!block;n#onSdCreate#0" />
             <element signature="n#!!block;n#onSdRemove#0" />
@@ -379,17 +404,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toolkit/sd_toolkit.js">
+    <entry file="file://$PROJECT_DIR$/routers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#sd_http_set_success#0" />
-            <element signature="n#!!block;n#sd_http_set_failed#0" />
-            <element signature="n#!!block;n#sd_res_success#0" />
-            <element signature="n#!!block;n#sd_res_failed#0" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/css/chris_flex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/react/testreact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/css/chris-base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_op.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="63" column="51" lean-forward="true" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
         </state>
       </provider>
     </entry>
