@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc7ff6b-d313-4089-9487-0412e8d15097" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/htmls/css/chris-base.css" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/css/chris-base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmls/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,10 +36,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="277">
+              <caret line="164" column="50" lean-forward="true" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
               <folding>
-                <element signature="n#SdOpButton#0" />
+                <element signature="n#SdInfoItem#0" />
+                <element signature="n#SandboxInfo#0" />
+                <element signature="n#!!block;n#constructor#0;n#SandboxOp#0" />
               </folding>
             </state>
           </provider>
@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
-              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <caret line="48" selection-start-line="48" selection-end-line="52" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -171,6 +171,12 @@
               <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
               <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
               <item name="htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SDOperator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDOperator" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -231,12 +237,12 @@
       <workItem from="1547541922601" duration="1708000" />
       <workItem from="1547686134218" duration="19072000" />
       <workItem from="1548031484588" duration="311000" />
-      <workItem from="1548062587688" duration="16781000" />
+      <workItem from="1548062587688" duration="17613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55813000" />
+    <option name="totallyTimeSpent" value="56645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -370,13 +376,6 @@
     <entry file="file://$PROJECT_DIR$/htmls/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmls/react/testreact.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -446,12 +445,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/js/html_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="48" selection-start-line="48" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="277">
+          <caret line="164" column="50" lean-forward="true" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
           <folding>
-            <element signature="n#SdOpButton#0" />
+            <element signature="n#SdInfoItem#0" />
+            <element signature="n#SandboxInfo#0" />
+            <element signature="n#!!block;n#constructor#0;n#SandboxOp#0" />
           </folding>
         </state>
       </provider>

@@ -52,13 +52,14 @@ class SdOpButton extends React.Component {
         super(props);
     }
 
-    handleClick() {
-
-    }
-
     render() {
         return (
-            <button className="sdop_button">{this.props.title}</button>
+            <button
+                className="sdop_button"
+                onClick={this.props.opCallback}
+            >
+                {this.props.title}
+            </button>
         )
     }
 }
@@ -68,32 +69,17 @@ class SandboxOp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {isToggleOn: true};
-
-        // 这边绑定是必要的，这样 `this` 才能在回调函数中使用
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
     }
 
     render() {
         return (
             <div className="sdop_board chris_coltopflex">
                 <div className="sdop_title">操作</div>
-                <SdOpButton title="添加沙盒" />
-                <SdOpButton title="删除沙盒" />
-                <SdOpButton title="查找一个沙盒" />
-                <SdOpButton title="删除所有沙盒" />
-                <SdOpButton title="查找所有沙盒" />
-                {/*<button id="sd_create" onClick="onSdCreate()">添加沙盒</button>*/}
-                {/*<button id="sd_remove" onClick="onSdRemove()">删除沙盒</button>*/}
-                {/*<button id="sd_select" onClick="onSdSelect()">查找一个沙盒</button>*/}
-                {/*<button id="sd_remove_all" onClick="onSdRemoveAll()">删除所有沙盒</button>*/}
-                {/*<button id="sd_select_all" onClick="onSdSelectAll()">查找所有沙盒</button>*/}
-                {/*<br/>*/}
-                {/*<label id="sd_testLabel">*/}
-                {/*暂无数据*/}
-                {/*</label>*/}
+                <SdOpButton title="添加沙盒" opCallback={this.props.sd_create} />
+                <SdOpButton title="删除沙盒" opCallback={this.props.sd_remove} />
+                <SdOpButton title="查找一个沙盒" opCallback={this.props.sd_select} />
+                <SdOpButton title="删除所有沙盒" opCallback={this.props.sd_remove_all} />
+                <SdOpButton title="查找所有沙盒" opCallback={this.props.sd_select_all} />
             </div>
         );
     }
@@ -106,6 +92,55 @@ class SdMainpage extends React.Component {
     constructor (props) {
         super(props)
     }
+
+    sd_create = () => {
+        var reqStr = "sandbox/create"
+            + "?appType=0"
+            + "&appConfig="
+            + "&os=0"
+            + "&ip="
+            + "&port="
+            + "&memory=1g"
+            + "&cpu=1024";
+
+        $.get(reqStr, function (data, status) {
+            $("#sd_testLabel").text(data);
+        }.bind(this));
+    };
+
+    sd_remove = () => {
+        var reqStr = "sandbox/remove"
+            + "?id=123";
+
+        $.get(reqStr, function (data, status) {
+            $("#sd_testLabel").text(data);
+        }.bind(this));
+    };
+
+    sd_select = () => {
+        var reqStr = "sandbox/selectSingle"
+            + "?id=123";
+
+        $.get(reqStr, function (data, status) {
+            $("#sd_testLabel").text(data);
+        }.bind(this));
+    };
+
+    sd_remove_all = () => {
+        var reqStr = "sandbox/removeAll";
+
+        $.get(reqStr, function (data, status) {
+            $("#sd_testLabel").text(data);
+        }.bind(this));
+    };
+
+    sd_select_all = () => {
+        var reqStr = "sandbox/selectAll";
+
+        $.get(reqStr, function (data, status) {
+            $("#sd_testLabel").text(data);
+        }.bind(this));
+    };
 
     render() {
         return (
@@ -121,8 +156,16 @@ class SdMainpage extends React.Component {
                     {/* 沙盒信息 */}
                     <SandboxInfo />
                     {/* 沙盒操作 */}
-                    <SandboxOp className="mainpage_sd_op"/>
+                    <SandboxOp
+                        className="mainpage_sd_op"
+                        sd_create={this.sd_create}
+                        sd_remove={this.sd_remove}
+                        sd_select={this.sd_select}
+                        sd_remove_all={this.sd_remove_all}
+                        sd_select_all={this.sd_select_all}
+                    />
                 </div>
+                <label id="sd_testLabel">xxx</label>
 
             </div>
         )
