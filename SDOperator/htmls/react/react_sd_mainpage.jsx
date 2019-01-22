@@ -91,8 +91,11 @@ class SdMainpage extends React.Component {
 
     constructor (props) {
         super(props)
+
+        this.state = {respVal: "暂无信息"}
     }
 
+    //创建沙盒
     sd_create = () => {
         var reqStr = "sandbox/create"
             + "?appType=0"
@@ -104,41 +107,45 @@ class SdMainpage extends React.Component {
             + "&cpu=1024";
 
         $.get(reqStr, function (data, status) {
-            $("#sd_testLabel").text(data);
+            this.setState({respVal: data});
         }.bind(this));
     };
 
+    //删除沙盒
     sd_remove = () => {
         var reqStr = "sandbox/remove"
             + "?id=123";
 
         $.get(reqStr, function (data, status) {
-            $("#sd_testLabel").text(data);
+            this.setState({respVal: data});
         }.bind(this));
     };
 
+    //查找沙盒
     sd_select = () => {
         var reqStr = "sandbox/selectSingle"
             + "?id=123";
 
         $.get(reqStr, function (data, status) {
-            $("#sd_testLabel").text(data);
+            this.setState({respVal: data});
         }.bind(this));
     };
 
+    //删除所有沙盒
     sd_remove_all = () => {
         var reqStr = "sandbox/removeAll";
 
         $.get(reqStr, function (data, status) {
-            $("#sd_testLabel").text(data);
+            this.setState({respVal: data});
         }.bind(this));
     };
 
+    //查找所有沙盒
     sd_select_all = () => {
         var reqStr = "sandbox/selectAll";
 
         $.get(reqStr, function (data, status) {
-            $("#sd_testLabel").text(data);
+            this.setState({respVal: data});
         }.bind(this));
     };
 
@@ -165,7 +172,7 @@ class SdMainpage extends React.Component {
                         sd_select_all={this.sd_select_all}
                     />
                 </div>
-                <label id="sd_testLabel">xxx</label>
+                <label id="sd_testLabel">{this.state.respVal}</label>
 
             </div>
         )

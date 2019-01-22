@@ -36,12 +36,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="164" column="50" lean-forward="true" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
+            <state relative-caret-position="169">
+              <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
               <folding>
                 <element signature="n#SdInfoItem#0" />
-                <element signature="n#SandboxInfo#0" />
-                <element signature="n#!!block;n#constructor#0;n#SandboxOp#0" />
               </folding>
             </state>
           </provider>
@@ -237,12 +235,12 @@
       <workItem from="1547541922601" duration="1708000" />
       <workItem from="1547686134218" duration="19072000" />
       <workItem from="1548031484588" duration="311000" />
-      <workItem from="1548062587688" duration="17613000" />
+      <workItem from="1548062587688" duration="17979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56645000" />
+    <option name="totallyTimeSpent" value="57011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,12 +452,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/htmls/react/react_sd_mainpage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="164" column="50" lean-forward="true" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
+        <state relative-caret-position="169">
+          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
           <folding>
             <element signature="n#SdInfoItem#0" />
-            <element signature="n#SandboxInfo#0" />
-            <element signature="n#!!block;n#constructor#0;n#SandboxOp#0" />
           </folding>
         </state>
       </provider>
