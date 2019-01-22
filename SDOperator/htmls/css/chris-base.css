@@ -45,7 +45,6 @@ html ,body{
     position:relative;
     width: 100%;
     height: 60px;
-
     font-size: 30px;
 }
 
@@ -55,62 +54,18 @@ html ,body{
     border-width: 1px;
     position:relative;
     width: 90%;
-    height: 90%;
-}
-
-.mainpage_sd_info {
-    background: #ffeeee;
-    border-color: #979797;
-    border-width: 1px;
-    position:relative;
-    width: 44%;
-    height: 90%;
-}
-
-.mainpage_sd_op {
-    background: #eeffee;
-    border-color: #979797;
-    border-width: 1px;
-    position:relative;
-    width: 52%;
-    height: 90%;
-}
-
-.mainpage_test {
-    background: #eeffee;
+    height: 600px;
 }
 
 /***************************************************** SD_INFO *****************************************************/
 
 .sdinfo_board {
-    /*background: #d8d8d8;*/
+    background: #ffeeee;
+    border-color: #979797;
+    border-width: 1px;
     position:relative;
-    width: 100%;
-    height: 100%;
-
-    /* 使用Flex */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-
-    /* 竖排模式 */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-
-    /* 横向居中 */
-    -webkit-box-align: center;
-    -moz-flex-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
+    width: 40%;
+    height: 90%;
 }
 
 .sdinfo_title {
@@ -152,6 +107,15 @@ html ,body{
 
 /*****************************************************  SD_OP  *****************************************************/
 
+.sdop_board {
+    background: #eeffee;
+    border-color: #979797;
+    border-width: 1px;
+    position:relative;
+    width: 52%;
+    height: 90%;
+}
+
 .sdop_title {
     /*background: #d8d8d8;*/
     font-size: 30px;
@@ -168,39 +132,11 @@ html ,body{
     margin: 12px;
 }
 
-
-
-
-
-
-/* 左上角的Icon基本样式 */
-.chris_icon {
-    width: 30px;
-    height: 30px;
-    position:relative;
-    margin: 5px;
-}
+/*****************************************************  OTHER  *****************************************************/
 
 /* 元素隐藏 */
 .divHide{
     display: none !important
-}
-
-/* 信息承载板 */
-.chris_baseboard {
-    background: #d8d8d8;
-    border-color: #979797;
-    border-width: 1px;
-    position:relative;
-    width: 70%;
-    height: 90%;
-}
-
-.chris_basearea {
-    margin: 18px 0px 0px 30px;
-    width: 90%;
-    height: 90%;
-    font-size: 16px
 }
 
 /* Div 基本布局: Flex横排居中 */
@@ -239,7 +175,6 @@ html ,body{
     align-items: center;
 }
 
-
 /* Div 基本布局: Flex纵向居中 */
 .chris_colflex {
 
@@ -266,6 +201,34 @@ html ,body{
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
+
+    /* 横向居中 */
+    -webkit-box-align: center;
+    -moz-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+
+/* Div 基本布局: Flex纵向布局，横向居中 */
+.chris_coltopflex {
+
+    /* 使用Flex */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    /* 竖排模式 */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
     /* 横向居中 */
     -webkit-box-align: center;
