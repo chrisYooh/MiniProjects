@@ -9,7 +9,7 @@ class SdInfoItem extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({itemValue: event.target.itemValue});
+        this.setState({itemValue: event.target.value});
     }
 
     render() {
@@ -34,11 +34,13 @@ class SandboxInfo extends React.Component {
             <div className="sdinfo_board chris_coltopflex">
                 <div className="sdinfo_title">沙盒信息</div>
                 <div className="sdinfo_opinfo">最近操作: {this.state.sdOpName}</div>
-                <SdInfoItem itemTitle="ID" />
-                <SdInfoItem itemTitle="系统" />
-                <SdInfoItem itemTitle="IP" />
-                <SdInfoItem itemTitle="端口" />
-                <SdInfoItem itemTitle="其他配置" />
+                <SdInfoItem itemTitle="ID" ref="ref_item_id"/>
+                <SdInfoItem itemTitle="应用类型" ref="ref_item_appType"/>
+                <SdInfoItem itemTitle="应用配置" ref="ref_item_appConfig"/>
+                <SdInfoItem itemTitle="系统" ref="ref_item_system"/>
+                <SdInfoItem itemTitle="IP" ref="ref_item_ip"/>
+                <SdInfoItem itemTitle="端口" ref="ref_item_port"/>
+
             </div>
         );
     }
@@ -97,37 +99,121 @@ class SdMainpage extends React.Component {
 
     //创建沙盒
     sd_create = () => {
+
+        var paraAppType = this.refs.ref_sdInfo.refs.ref_item_appType.state.itemValue;
+        var paraAppConfig = this.refs.ref_sdInfo.refs.ref_item_appConfig.state.itemValue;
+        var paraOs = this.refs.ref_sdInfo.refs.ref_item_system.state.itemValue;
+        var paraIp = this.refs.ref_sdInfo.refs.ref_item_ip.state.itemValue;
+        var paraPort = this.refs.ref_sdInfo.refs.ref_item_port.state.itemValue;
+
         var reqStr = "sandbox/create"
-            + "?appType=0"
-            + "&appConfig="
-            + "&os=0"
-            + "&ip="
-            + "&port="
-            + "&memory=1g"
-            + "&cpu=1024";
+            + "?appType=" + paraAppType
+            + "&appConfig=" + paraAppConfig
+            + "&os=" + paraOs
+            + "&ip=" + paraIp
+            + "&port=" + paraPort
+        ;
 
         $.get(reqStr, function (data, status) {
+
+            var jsonData = JSON.parse(data);
+            var code = jsonData.code;
+            if (0 != code) {
+                alert("沙盒创建失败" + jsonData.errMsg);
+                return;
+            }
+
+            var rspId = jsonData.data.id;
+            var rspAppType = jsonData.data.appType;
+            var rspAppConfig = jsonData.data.appConfig;
+            var rspOs = jsonData.data.os;
+            var rspIp = jsonData.data.ip;
+            var rspPort = jsonData.data.port;
+
+            this.refs.ref_sdInfo.refs.ref_item_id.setState({itemValue: rspId});
+            this.refs.ref_sdInfo.refs.ref_item_appType.setState({itemValue: rspAppType});
+            this.refs.ref_sdInfo.refs.ref_item_appConfig.setState({itemValue: rspAppConfig});
+            this.refs.ref_sdInfo.refs.ref_item_system.setState({itemValue: rspOs});
+            this.refs.ref_sdInfo.refs.ref_item_ip.setState({itemValue: rspIp});
+            this.refs.ref_sdInfo.refs.ref_item_port.setState({itemValue: rspPort});
             this.setState({respVal: data});
+
+            alert("沙盒 创建成功，详情见 沙盒信息");
         }.bind(this));
     };
 
     //删除沙盒
     sd_remove = () => {
+
+        var paraId = this.refs.ref_sdInfo.refs.ref_item_id.state.itemValue;
+
         var reqStr = "sandbox/remove"
-            + "?id=123";
+            + "?id=" + paraId
+        ;
 
         $.get(reqStr, function (data, status) {
+
+            var jsonData = JSON.parse(data);
+            var code = jsonData.code;
+            if (0 != code) {
+                alert("沙盒删除失败：" + jsonData.errMsg);
+                return;
+            }
+
+            var rspId = jsonData.data.containerId;
+            // var rspAppType = jsonData.data.appType;
+            // var rspAppConfig = jsonData.data.appConfig;
+            // var rspOs = jsonData.data.os;
+            // var rspIp = jsonData.data.ip;
+            var rspPort = jsonData.data.ports;
+
+            this.refs.ref_sdInfo.refs.ref_item_id.setState({itemValue: rspId});
+            // this.refs.ref_sdInfo.refs.ref_item_appType.setState({itemValue: rspAppType});
+            // this.refs.ref_sdInfo.refs.ref_item_appConfig.setState({itemValue: rspAppConfig});
+            // this.refs.ref_sdInfo.refs.ref_item_system.setState({itemValue: rspOs});
+            // this.refs.ref_sdInfo.refs.ref_item_ip.setState({itemValue: rspIp});
+            this.refs.ref_sdInfo.refs.ref_item_port.setState({itemValue: rspPort});
+
             this.setState({respVal: data});
+
+            alert("久等了...沙盒已删除，删除的沙盒信息见 沙盒信息");
         }.bind(this));
     };
 
     //查找沙盒
     sd_select = () => {
+
+        var paraId = this.refs.ref_sdInfo.refs.ref_item_id.state.itemValue;
+
         var reqStr = "sandbox/selectSingle"
-            + "?id=123";
+            + "?id=" + paraId
+        ;
 
         $.get(reqStr, function (data, status) {
+
+            var jsonData = JSON.parse(data);
+            var code = jsonData.code;
+            if (0 != code) {
+                alert("沙盒查找失败：" + jsonData.errMsg);
+                return;
+            }
+
+            var rspId = jsonData.data.containerId;
+            // var rspAppType = jsonData.data.appType;
+            // var rspAppConfig = jsonData.data.appConfig;
+            // var rspOs = jsonData.data.os;
+            // var rspIp = jsonData.data.ip;
+            var rspPort = jsonData.data.ports;
+
+            this.refs.ref_sdInfo.refs.ref_item_id.setState({itemValue: rspId});
+            // this.refs.ref_sdInfo.refs.ref_item_appType.setState({itemValue: rspAppType});
+            // this.refs.ref_sdInfo.refs.ref_item_appConfig.setState({itemValue: rspAppConfig});
+            // this.refs.ref_sdInfo.refs.ref_item_system.setState({itemValue: rspOs});
+            // this.refs.ref_sdInfo.refs.ref_item_ip.setState({itemValue: rspIp});
+            this.refs.ref_sdInfo.refs.ref_item_port.setState({itemValue: rspPort});
             this.setState({respVal: data});
+            alert("沙盒 查找完成，详情见 沙盒信息");
+
         }.bind(this));
     };
 
@@ -136,16 +222,37 @@ class SdMainpage extends React.Component {
         var reqStr = "sandbox/removeAll";
 
         $.get(reqStr, function (data, status) {
+
+            var jsonData = JSON.parse(data);
+            var code = jsonData.code;
+            if (0 != code) {
+                alert("沙盒删除失败：" + jsonData.errMsg);
+                return;
+            }
+
             this.setState({respVal: data});
+            alert("久等了...删除所有沙盒成功！共删除 " + jsonData.data.length + " 个沙盒");
+
         }.bind(this));
     };
 
     //查找所有沙盒
     sd_select_all = () => {
+
         var reqStr = "sandbox/selectAll";
 
         $.get(reqStr, function (data, status) {
+
+            var jsonData = JSON.parse(data);
+            var code = jsonData.code;
+            if (0 != code) {
+                alert("沙盒查找失败：" + jsonData.errMsg);
+                return;
+            }
+
             this.setState({respVal: data});
+            alert("信息查找成功，共找到 " + jsonData.data.length + " 个沙盒");
+            
         }.bind(this));
     };
 
@@ -161,7 +268,7 @@ class SdMainpage extends React.Component {
                 {/* 内容 */}
                 <div id="mainpage_sd_board" className="mainpage_sd_board chris_rowflex">
                     {/* 沙盒信息 */}
-                    <SandboxInfo />
+                    <SandboxInfo ref="ref_sdInfo"/>
                     {/* 沙盒操作 */}
                     <SandboxOp
                         className="mainpage_sd_op"
