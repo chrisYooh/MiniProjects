@@ -10,14 +10,12 @@ function sd_router(app) {
         var paras = url.parse(req.url, true).query;
 
         /* 参数检查(可能返回错误) */
-        var appType = paras.appType;        /* 应用类型 */
-        var appConfig = paras.appConfig;    /* 执行配置 */
-        var os = paras.os;                  /* 系统 */
-        var ip = paras.ip;                  /* IP地址 */
-        var port = paras.port;              /* 端口 */
+        var appName = paras.appName;        /* 应用名称（image名称） */
+        var appConfig = toolkit.unicode_de(paras.appConfig);    /* 启动配置 */
+        var appCommand = toolkit.unicode_de(paras.appCommand);  /* 启动命令 */
 
         /* 执行命令 */
-        var rstObj = cydocker.container_create(appType, appConfig, os, ip, port);
+        var rstObj = cydocker.container_create(appName, appConfig, appCommand);
         if (rstObj.code < 0) {
             toolkit.sd_http_set_failed(res, rstObj);
             return;

@@ -19,7 +19,7 @@ var app3 = "inner_server_3";
  * */
 
 /* 单沙盒创建：根据特定属性创建一个沙盒 */
-function container_create(appType, appConfig, os, ip, port) {
+function container_create(appName, appConfig, appCommand) {
 
     var retObj = {
         "code": 0,
@@ -28,25 +28,25 @@ function container_create(appType, appConfig, os, ip, port) {
 
     var cmdStr = "docker run -d ";
 
-    /* 端口处理 */
-    if (port.length > 0) {
-        cmdStr = cmdStr + "-p " + port + ":" + serverPortStr;
-    } else {
-        cmdStr += "-P ";
+    /* 运行配置 */
+    if (appConfig) {
+        cmdStr = cmdStr + appConfig + " ";
     }
 
     /* 应用选择 */
-    if (1 == appType) {
-        cmdStr += app1;
-    } else if (2 == appType) {
-        cmdStr += app2;
-    } else if (3 == appType) {
-        cmdStr += app3;
+    if (appName) {
+        cmdStr = cmdStr + appName + " ";
     } else {
-        cmdStr += app1;
+        cmdStr = cmdStr + app1 + " ";
     }
 
-    /* 执行命令 */
+    /* 运行命令 */
+    if (appCommand) {
+        cmdStr = cmdStr + appCommand + " ";
+    }
+
+    console.log(cmdStr);
+    /* 运行命令 */
     var rstBuffer;
     try {
         rstBuffer = execSync(cmdStr);
