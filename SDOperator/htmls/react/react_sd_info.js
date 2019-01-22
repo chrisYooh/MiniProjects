@@ -3,6 +3,8 @@ class SdInfoItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {itemValue: " "};
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
@@ -12,8 +14,8 @@ class SdInfoItem extends React.Component {
     render() {
         return (
             <div className="sdinfo_item">
-                <label className="sdinfo_title">{this.props.itemTitle}</label>
-                <input className="sdinfo_value" type="text" value={this.state.itemValue} onChange={this.handleChange} />
+                <label className="sditem_title">{this.props.itemTitle}</label>
+                <input className="sditem_value" type="text" value={this.state.itemValue} onChange={this.handleChange} />
             </div>
         )
     }
@@ -29,9 +31,8 @@ class SandboxInfo extends React.Component {
     render() {
         return (
             <div className="sdinfo_board">
-                <p1>沙盒信息</p1>
-                <br />
-                <p2>最近操作: {this.state.sdOpName}</p2>
+                <p1 className="sdinfo_title">沙盒信息</p1>
+                <p2 className="sdinfo_opinfo">最近操作: {this.state.sdOpName}</p2>
                 <SdInfoItem itemTitle="ID" />
                 <SdInfoItem itemTitle="系统" />
                 <SdInfoItem itemTitle="IP" />
