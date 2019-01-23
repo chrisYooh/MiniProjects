@@ -76,7 +76,7 @@ function container_remove(conId) {
     var cmdStr = "docker stop " + conId;
     execSync(cmdStr);
 
-    var cmdStr = "docker rm " + conId;
+    cmdStr = "docker rm " + conId;
     execSync(cmdStr);
 
     return rstInfo;
@@ -121,15 +121,31 @@ function container_select(conId) {
 function container_removeAll() {
 
     var itemArray = container_selectAll().conItems;
-    for (i = 0; i < itemArray.length; i++) {
-        container_remove(itemArray[i].containerId);
-    }
-
     var retObj = {
         "code": 0,
         "message": "",
         "conItems": itemArray
     };
+
+    /* 无可删除项目 */
+    if (itemArray.length <= 0) {
+        return retObj;
+    }
+
+    /* 组织删除命令 */
+    var idsStr = "";
+    for (var i = 0; i < itemArray.length; i++) {
+        idsStr = idsStr + itemArray[i].id + " ";
+    }
+
+    /* 批量停止容器 */
+    var cmdStr = "docker stop " + idsStr;
+    execSync(cmdStr);
+
+    /* 批量删除容器 */
+    cmdStr = "docker rm " + idsStr;
+    execSync(cmdStr);
+
     return retObj;
 }
 
@@ -154,6 +170,7 @@ function container_selectAll() {
     var rstStr = tmpBuf.toString();
     var lineArray = rstStr.split("\n");
 
+    /* 组织返回信息 */
     var itemArray = [];
     for (var i = 1; i < lineArray.length; i++) {
         if (lineArray[i].length <= 0 ) {
