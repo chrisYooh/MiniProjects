@@ -141,8 +141,8 @@ function container_selectAll() {
         "message": ""
     };
 
-    var cmdStr = "docker ps -a";
-
+    /* 查找现存container Id信息 */
+    var cmdStr = "docker ps -a | awk '{print $1}'";
     var tmpBuf;
     try {
         tmpBuf = execSync(cmdStr);
@@ -151,18 +151,21 @@ function container_selectAll() {
         retObj.message = shortStr(e.message);
         return retObj;
     }
-
     var rstStr = tmpBuf.toString();
     var lineArray = rstStr.split("\n");
 
-    var itemArray = JSON.parse("[]");
-    for (i = 1; i < lineArray.length; i++) {
+    var itemArray = [];
+    for (var i = 1; i < lineArray.length; i++) {
         if (lineArray[i].length <= 0 ) {
             continue;
         }
 
-        var tmpItem = container_parserItem(lineArray[i]);
-        itemArray.push(tmpItem);
+        var rstInfo = container_select(lineArray[i]);
+        if (rstInfo.code < 0) {
+            continue;
+        }
+
+        itemArray.push(rstInfo.conItem);
     }
 
     retObj.conItems = itemArray;

@@ -130,7 +130,7 @@
   }],
 
   //1.6 执行命令
-  //Route : sandbox/cmdExec
+  //Route : common/cmdExec
   //Parameter:
   {
     "cmd": "[必选] 期望执行的命令"
