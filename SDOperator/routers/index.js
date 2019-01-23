@@ -21,9 +21,8 @@ function sd_router(app) {
             return;
         }
 
-        /* 成功 */
-        paras.id = rstObj.conId;
-        toolkit.sd_http_set_success(res, paras);
+        /* 添加成功 */
+        toolkit.sd_http_set_success(res, rstObj.conItem);
     });
 
     app.get("/sandbox/remove", function (req, res) {

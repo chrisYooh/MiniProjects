@@ -2,12 +2,12 @@ var cydocker = require('../toolkit/cy_docker');
 var sdtoolkit = require('../toolkit/sd_toolkit');
 
 /* 创建测试 */
-// var rst = cydocker.container_create('','','','','');
-// console.log(rst);
+var rst = cydocker.container_create('','-P','');
+console.log(rst);
 
 /* 查找 */
-var rst = cydocker.container_select("6ef847562758");
-console.log(rst);
+// var rst = cydocker.container_select("6ef847562758");
+// console.log(rst);
 
 /* 删除 */
 // var rst = cydocker.container_remove("478646978d8647da150f");

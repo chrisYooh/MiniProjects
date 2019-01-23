@@ -7,9 +7,7 @@ var async = require('async');
 /* 待配置参数 */
 var serverPortStr = "9999";
 var app0 = "inner_server_1";
-var app1 = "inner_server_1";
-var app2 = "inner_server_2";
-var app3 = "inner_server_3";
+
 
 /* 统一返回一个JsonObj
  * code : 返回码，0位正常
@@ -37,7 +35,7 @@ function container_create(appName, appConfig, appCommand) {
     if (appName) {
         cmdStr = cmdStr + appName + " ";
     } else {
-        cmdStr = cmdStr + app1 + " ";
+        cmdStr = cmdStr + app0 + " ";
     }
 
     /* 运行命令 */
@@ -52,18 +50,19 @@ function container_create(appName, appConfig, appCommand) {
         rstBuffer = execSync(cmdStr);
     } catch (e) {
         retObj.code = -1;
-        retObj.message = shortStr(e.message);
+        retObj.message += "沙盒创建失败";
+        retObj.message += shortStr(e.message);
         return retObj;
     }
 
-    /* 获取Id（前20位）*/
-    var tmpStr = rstBuffer.toString();
-    if (tmpStr.length > 20) {
-        tmpStr = tmpStr.substring(0, 20);
+    /* 查找沙盒信息 */
+    var tmpIdStr = rstBuffer.toString();
+    var rstInfo = container_select(tmpIdStr);
+    if (rstInfo.code < 0) {
+        return rstInfo;
     }
 
-    retObj.conId = tmpStr;
-    return retObj;
+    return rstInfo;
 }
 
 /* 单沙盒删除：根据一个Id删除一个沙盒 */
@@ -105,7 +104,8 @@ function container_select(conId) {
         rstBuffer = execSync(cmdStr);
     } catch (e) {
         retObj.code = -1;
-        retObj.message = shortStr(e.message);
+        // retObj.message = shortStr(e.message);
+        retObj.message = "获取沙盒信息失败，沙盒可能不存在";
         return retObj;
     }
 
@@ -213,8 +213,8 @@ function container_parserItem(itemStr) {
 }
 
 function shortStr(inputStr) {
-    if (inputStr.length > 50) {
-        inputStr = inputStr.substring(0, 50) + "...";
+    if (inputStr.length > 100) {
+        inputStr = inputStr.substring(0, 100) + "...";
     }
     return inputStr;
 }
