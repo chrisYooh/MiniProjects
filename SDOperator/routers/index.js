@@ -1,6 +1,7 @@
 var url = require('url');
 var toolkit = require("../toolkit/sd_toolkit");
 var cydocker = require('../toolkit/cy_docker');
+var execSync = require('child_process').execSync;
 
 function sd_router(app) {
 
@@ -84,6 +85,34 @@ function sd_router(app) {
         /* 成功消息 */
         toolkit.sd_http_set_success(res, rstObj.conItems);
     });
+
+    app.get("/common/cmdExec", function (req, res) {
+
+        /* 参数获取 */
+        var paras = url.parse(req.url, true).query;
+        var uniCmd = paras.cmd;
+
+        /* 功能处理 */
+        var cmdStr = toolkit.unicode_de(uniCmd);
+        var rstBuffer;
+        try {
+            rstBuffer = execSync(cmdStr);
+        } catch (e) {
+            /* 出错  */
+            var tmpObj = {
+                "code": -1,
+                "message": e.message
+            }
+            toolkit.sd_http_set_failed(res, tmpObj);
+            return;
+        }
+
+        /* 成功消息 */
+        var tmpSuccessObj = {
+            "resp": rstBuffer.toString()
+        }
+        toolkit.sd_http_set_success(res, tmpSuccessObj);
+    })
 }
 
 module.exports = sd_router;
