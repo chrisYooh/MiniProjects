@@ -93,12 +93,12 @@ function container_select(conId) {
 
     if (conId.length < 10) {
         retObj.code = -1;
-        retObj.message = "输入Id不合过短";
+        retObj.message = "输入Id不合法，过短";
         return retObj;
     }
 
     var subIdStr = conId.substring(0, 10);
-    var cmdStr = "docker ps -a | grep " + subIdStr;
+    var cmdStr = "docker inspect " + subIdStr;
 
     var rstBuffer;
     try {
@@ -172,18 +172,42 @@ function container_selectAll() {
 /* 支持：解析单行容器信息-->容器数据结构 */
 function container_parserItem(itemStr) {
 
-    var tmpArray = itemStr.split(/ [ ]+/);
+    var jsonObj = JSON.parse(itemStr);
 
-    var tmpItem = JSON.parse("{}");
-    if (tmpArray.length >= 7) {
-        tmpItem.containerId = tmpArray[0];
-        tmpItem.imageName = tmpArray[1];
-        tmpItem.command = tmpArray[2];
-        tmpItem.createInfo = tmpArray[3];
-        tmpItem.status = tmpArray[4];
-        tmpItem.ports = tmpArray[5];
-        tmpItem.constainerName = tmpArray[6];
+
+    var info_id = jsonObj[0].Id;
+    if (info_id.length > 20) {
+        info_id = info_id.substring(0, 20);
     }
+    var info_appName = jsonObj[0].Config.Image;
+    var info_appCommand = "";
+    for (var tmpIndex in jsonObj[0].Config.Cmd) {
+        info_appCommand = info_appCommand + jsonObj[0].Config.Cmd[tmpIndex] + " ";
+    }
+    var info_os = jsonObj[0].Platform;
+    var info_portMap = "";
+    var tmpPortsInfo = jsonObj[0].NetworkSettings.Ports;
+    for (var tmpKey in tmpPortsInfo) {
+        for (var tmpIndex in tmpPortsInfo[tmpKey]) {
+            info_portMap = info_portMap + tmpPortsInfo[tmpKey][tmpIndex].HostPort + "->";
+        }
+        info_portMap = info_portMap + tmpKey;
+    }
+    var info_sdName = jsonObj[0].Name;
+    info_sdName = info_sdName.replace("/", "");
+    var info_createTime = jsonObj[0].Created;
+    var info_lastStartTime = jsonObj[0].State.StartedAt;
+
+    var tmpItem = {
+        "id": info_id,
+        "appName": info_appName,
+        "appCommand": info_appCommand,
+        "platform": info_os,
+        "portMap": info_portMap,
+        "sandboxName": info_sdName,
+        "createTime": info_createTime,
+        "lastStartTime": info_lastStartTime
+    };
 
     return tmpItem;
 }

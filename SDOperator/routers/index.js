@@ -43,7 +43,7 @@ function sd_router(app) {
         toolkit.sd_http_set_success(res, rstObj.conItem);
     });
 
-    app.get("/sandbox/selectSingle", function (req, res) {
+    app.get("/sandbox/select", function (req, res) {
 
         /* 参数获取 */
         var paras = url.parse(req.url, true).query;
