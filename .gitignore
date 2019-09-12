@@ -1,0 +1,6 @@
+.idea
+
+PyTorchTrain/Summary/*.pt
+PyTorchTrain/Summary/test.png
+PyTorchTrain/Summary/data
+
