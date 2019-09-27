@@ -61,11 +61,7 @@ static void __add(int dimTag,
     float *tmppa = pA;
     float *tmppb = pB;
     float *tmppc = pC;
-    
     for (int i = 0; i < curDimC; i++) {
-        tmppc = pC + i * curStepC;
-        tmppa = pA + i * curStepA;
-        tmppb = pB + i * curStepB;
         
         if (dimTag == dimNum - 1) {
             *tmppc = *tmppa + *tmppb;
@@ -75,6 +71,10 @@ static void __add(int dimTag,
                   tmppa, rev_stepAs, dimAs,
                   tmppb, rev_stepBs, dimBs);
         }
+        
+        tmppc += curStepC;
+        tmppa += curStepA;
+        tmppb += curStepB;
     }
 }
 
