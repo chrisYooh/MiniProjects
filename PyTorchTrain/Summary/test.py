@@ -24,7 +24,7 @@ import numpy as np
 
 # 图像显示函数
 def imshow(img):
-   img = img /2+0.5     # 非标准的（unnormalized）
+   img = img / 2 + 0.5     # 非标准的（unnormalized）
    npimg = img.numpy()
    plt.imshow(np.transpose(npimg, (1, 2, 0)))
    plt.show()
@@ -97,6 +97,7 @@ for epoch in range(2):  # 多次循环遍历数据集
            running_loss =0.0
 
    torch.save(net, 'aaa' + str(epoch) + ".pt")
+   torch.save(net.state_dict(), 'bbb' + str(epoch) + ".pt")
 
 print('Finished Training')
 

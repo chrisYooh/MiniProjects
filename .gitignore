@@ -1,6 +1,10 @@
 .idea
+__pycache__
 
+PyTorchTrain/data
 PyTorchTrain/Summary/*.pt
 PyTorchTrain/Summary/test.png
 PyTorchTrain/Summary/data
+PyTorchTrain/Project/out_weight
+
 
