@@ -1,3 +1,7 @@
+project.xcworkspace
+xcshareddata
+xcuserdata
+
 .idea
 __pycache__
 
